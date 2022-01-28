@@ -5,6 +5,7 @@ export const Post = ({title,body,userId,id}) => {
 
     const [user, setUser] = useState(null);
 
+    //Fetching with async/await
     const getUser = async () => {
         let response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
         let json = await response.json();
